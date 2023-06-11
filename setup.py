@@ -32,8 +32,8 @@ or
 """
 import glob
 import os
-from distutils import log
-from distutils.core import setup
+# from distutils import log
+from setuptools import setup
 
 from easybuild.tools.version import VERSION
 
@@ -46,9 +46,9 @@ def read(fname):
 
 
 # log levels: 0 = WARN (default), 1 = INFO, 2 = DEBUG
-log.set_verbosity(1)
+# log.set_verbosity(1)
 
-log.info("Installing version %s (API version %s)" % (VERSION, API_VERSION))
+# log.info("Installing version %s (API version %s)" % (VERSION, API_VERSION))
 
 
 def find_rel_test():
