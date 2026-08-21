@@ -949,8 +949,8 @@ def download_file(filename, url, path, forced=False, trace=True, max_attempts=No
                 _log.info("Attempt %d of downloading %s to %s failed, trying again..." % (attempt_cnt, url, path))
                 if used_urllib is std_urllib and switch_to_requests:
                     if not HAVE_REQUESTS:
-                        raise EasyBuildError("SSL issues with urllib2. If you are using RHEL/CentOS 6.x please "
-                                             "install the python-requests and pyOpenSSL RPM packages and try again.")
+                        raise EasyBuildError("SSL issues with urllib2. Please install the Python requests package "
+                                             "and try again.")
                     _log.info("Downloading using requests package instead of urllib2")
                     used_urllib = requests
 
